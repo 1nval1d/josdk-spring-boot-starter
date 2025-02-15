@@ -86,7 +86,8 @@ class ReconcilerRegistrationUtilTest {
   private static class TestEmptyReconciler implements Reconciler<HasMetadata> {
 
     @Override
-    public UpdateControl<HasMetadata> reconcile(HasMetadata resource, Context<HasMetadata> context) {
+    public UpdateControl<HasMetadata> reconcile(HasMetadata resource,
+        Context<HasMetadata> context) {
       return null;
     }
   }
@@ -97,7 +98,8 @@ class ReconcilerRegistrationUtilTest {
   private static class TestSingleEntryReconciler implements Reconciler<HasMetadata> {
 
     @Override
-    public UpdateControl<HasMetadata> reconcile(HasMetadata resource, Context<HasMetadata> context) {
+    public UpdateControl<HasMetadata> reconcile(HasMetadata resource,
+        Context<HasMetadata> context) {
       return null;
     }
   }
@@ -109,7 +111,8 @@ class ReconcilerRegistrationUtilTest {
   private static class TestSecondEntryReconciler implements Reconciler<HasMetadata> {
 
     @Override
-    public UpdateControl<HasMetadata> reconcile(HasMetadata resource, Context<HasMetadata> context) {
+    public UpdateControl<HasMetadata> reconcile(HasMetadata resource,
+        Context<HasMetadata> context) {
       return null;
     }
   }
@@ -120,7 +123,8 @@ class ReconcilerRegistrationUtilTest {
   private static class TestDoubleEntryReconciler implements Reconciler<HasMetadata> {
 
     @Override
-    public UpdateControl<HasMetadata> reconcile(HasMetadata resource, Context<HasMetadata> context) {
+    public UpdateControl<HasMetadata> reconcile(HasMetadata resource,
+        Context<HasMetadata> context) {
       return null;
     }
   }
