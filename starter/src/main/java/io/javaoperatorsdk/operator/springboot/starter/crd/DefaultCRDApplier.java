@@ -1,18 +1,19 @@
 package io.javaoperatorsdk.operator.springboot.starter.crd;
 
-import io.fabric8.kubernetes.api.model.HasMetadata;
-import io.fabric8.kubernetes.api.model.ObjectMeta;
-import io.fabric8.kubernetes.client.KubernetesClient;
-import io.javaoperatorsdk.operator.springboot.starter.properties.OperatorConfigurationProperties;
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
-import java.nio.file.Paths;
-import java.util.List;
+import io.fabric8.kubernetes.api.model.HasMetadata;
+import io.fabric8.kubernetes.api.model.ObjectMeta;
+import io.fabric8.kubernetes.client.KubernetesClient;
+import io.javaoperatorsdk.operator.springboot.starter.properties.OperatorConfigurationProperties;
 
 import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;

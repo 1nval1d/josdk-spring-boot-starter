@@ -20,7 +20,7 @@ public class OperatorStarter {
   private final CRDApplier crdApplier;
 
 
-  public OperatorStarter(Operator operator, CRDApplier crdApplier){
+  public OperatorStarter(Operator operator, CRDApplier crdApplier) {
     this.operator = operator;
     this.crdApplier = crdApplier;
   }

@@ -12,27 +12,27 @@ public class CrdProperties {
    */
   private String suffix = "-v1.yml";
 
-  public boolean isApplyOnStartup(){
+  public boolean isApplyOnStartup() {
     return applyOnStartup;
   }
 
-  public void setApplyOnStartup(boolean applyOnStartup){
+  public void setApplyOnStartup(boolean applyOnStartup) {
     this.applyOnStartup = applyOnStartup;
   }
 
-  public String getPath(){
+  public String getPath() {
     return path;
   }
 
-  public void setPath(String path){
+  public void setPath(String path) {
     this.path = path;
   }
 
-  public String getSuffix(){
+  public String getSuffix() {
     return suffix;
   }
 
-  public void setSuffix(String suffix){
+  public void setSuffix(String suffix) {
     this.suffix = suffix;
   }
 }

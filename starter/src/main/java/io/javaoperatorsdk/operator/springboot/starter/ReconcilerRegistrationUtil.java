@@ -13,7 +13,8 @@ import io.javaoperatorsdk.operator.springboot.starter.properties.ReconcilerPrope
 
 public class ReconcilerRegistrationUtil {
 
-  public static List<DependentResourceConfigurator> filterConfigurators(Reconciler<?> reconciler, Map<String, List<DependentResourceConfigurator>> configuratorsMap) {
+  public static List<DependentResourceConfigurator> filterConfigurators(Reconciler<?> reconciler,
+      Map<String, List<DependentResourceConfigurator>> configuratorsMap) {
     var workflow = reconciler.getClass().getAnnotation(Workflow.class);
     if (workflow == null)
       return Collections.emptyList();
