@@ -10,13 +10,10 @@ import io.javaoperatorsdk.operator.api.reconciler.dependent.Dependent;
 import io.javaoperatorsdk.operator.processing.retry.GenericRetry;
 import io.javaoperatorsdk.operator.springboot.starter.properties.ReconcilerProperties;
 
-import lombok.experimental.UtilityClass;
 
-@UtilityClass
 public class ReconcilerRegistrationUtil {
 
-  public List<DependentResourceConfigurator> filterConfigurators(Reconciler<?> reconciler,
-      Map<String, List<DependentResourceConfigurator>> configuratorsMap) {
+  public static List<DependentResourceConfigurator> filterConfigurators(Reconciler<?> reconciler, Map<String, List<DependentResourceConfigurator>> configuratorsMap) {
     var workflow = reconciler.getClass().getAnnotation(Workflow.class);
     if (workflow == null)
       return Collections.emptyList();
@@ -37,8 +34,7 @@ public class ReconcilerRegistrationUtil {
     return relevant;
   }
 
-
-  public void overrideFromProps(ControllerConfigurationOverrider<?> overrider,
+  public static void overrideFromProps(ControllerConfigurationOverrider<?> overrider,
       ReconcilerProperties props) {
     if (props != null) {
       doIfPresent(props.getFinalizerName(), overrider::withFinalizer);
@@ -63,7 +59,7 @@ public class ReconcilerRegistrationUtil {
     }
   }
 
-  public <T> void doIfPresent(T prop, Consumer<T> action) {
+  public static <T> void doIfPresent(T prop, Consumer<T> action) {
     Optional.ofNullable(prop).ifPresent(action);
   }
 }
