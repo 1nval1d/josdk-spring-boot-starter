@@ -30,12 +30,12 @@ class CRDApplierTest {
     t.getMetadata().setLabels(Map.of("transformed", "true"));
     return t;
   });
+  private final String crdPath = "/META-INF/fabric8/";
   @Mock
   private KubernetesClient kubernetesClient;
   @Mock
   private NamespaceListVisitFromServerGetDeleteRecreateWaitApplicable<HasMetadata> loadedResource;
   private String crdSuffix = "-v2.yml";
-  private final String crdPath = "/META-INF/fabric8/";
 
   private CRDApplier applier() {
     var props = new OperatorConfigurationProperties();

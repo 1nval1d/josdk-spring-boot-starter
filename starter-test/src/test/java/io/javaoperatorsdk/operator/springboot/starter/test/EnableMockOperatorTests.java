@@ -42,6 +42,8 @@ class EnableMockOperatorTests {
 
   @Autowired
   ApplicationContext applicationContext;
+  @Autowired
+  private OperatorConfigurationProperties operatorConfigurationProperties;
 
   @Test
   void testCrdLoaded() {
@@ -63,9 +65,6 @@ class EnableMockOperatorTests {
             .get())
         .isNotNull();
   }
-
-  @Autowired
-  private OperatorConfigurationProperties operatorConfigurationProperties;
 
   @Test
   void customServiceReconciler() {
